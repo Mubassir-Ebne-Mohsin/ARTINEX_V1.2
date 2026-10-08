@@ -1,0 +1,14 @@
+{
+  "name": "Artinex",
+  "strapline": "Intelligence, in context.",
+  "description": "Artinex tracks the world of artificial intelligence through sourced headlines, accessible explainers, research, models and tools.",
+  "publisher": "Artinex Editorial",
+  "social": {"x": "", "linkedin": ""},
+  "nav": [
+    {"label":"Latest","href":"/news"},
+    {"label":"Articles","href":"/articles"},
+    {"label":"Research","href":"/category/research"},
+    {"label":"Models","href":"/models"},
+    {"label":"Tools","href":"/tools"}
+  ]
+}

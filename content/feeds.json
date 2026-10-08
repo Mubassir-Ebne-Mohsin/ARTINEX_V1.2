@@ -1,0 +1,9 @@
+[
+  { "name": "OpenAI", "url": "https://openai.com/news/rss.xml", "category": "Company news", "homepage": "https://openai.com/news" },
+  { "name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "category": "Research", "homepage": "https://deepmind.google/blog/" },
+  { "name": "Google Research", "url": "https://research.google/blog/rss/", "category": "Research", "homepage": "https://research.google/blog/" },
+  { "name": "Hugging Face", "url": "https://huggingface.co/blog/feed.xml", "category": "Open source", "homepage": "https://huggingface.co/blog" },
+  { "name": "Mistral AI", "url": "https://mistral.ai/news/rss", "category": "Company news", "homepage": "https://mistral.ai/news" },
+  { "name": "MIT News", "url": "https://news.mit.edu/rss/topic/artificial-intelligence2", "category": "Research", "homepage": "https://news.mit.edu/topic/artificial-intelligence2" },
+  { "name": "arXiv cs.AI", "url": "https://rss.arxiv.org/rss/cs.AI", "category": "Papers", "homepage": "https://arxiv.org/list/cs.AI/recent" }
+]

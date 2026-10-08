@@ -1,0 +1,129 @@
+[
+  {
+    "slug":"how-large-language-models-work",
+    "title":"How large language models actually work",
+    "subtitle":"From tokens and transformers to capabilities, costs and limitations.",
+    "excerpt":"A practical introduction to LLMs: what they learn, why they predict tokens and where they fail.",
+    "category":"Explainers","tags":["LLMs","Fundamentals","Transformers"],"author":"Artinex Editorial","publishedAt":"2026-10-08","status":"published","kind":"Educational guide","featured":true,"image":"/assets/ai.jpg",
+    "takeaways":["Language models learn statistical patterns in sequences of tokens.","Transformer attention lets models use context; it is not a guarantee of factual accuracy.","Evaluate cost, reliability, safety and privacy before production deployment."],
+    "sections":[
+      {"heading":"What a language model predicts","paragraphs":["A large language model (LLM) assigns probabilities to possible next tokens based on the preceding context. A token may represent a word, part of a word, punctuation or other text unit. Repeated prediction produces a response, one token at a time.","During pretraining, model parameters are adjusted to reduce prediction error on many examples. A subsequent instruction-tuning or preference-optimization process may help the model follow requests more usefully."]},
+      {"heading":"Why the transformer matters","paragraphs":["Transformers use attention mechanisms to represent relationships among positions in a sequence. The architecture makes it possible to process context efficiently compared with many older recurrent approaches.","The size of the context window is model-dependent and does not guarantee perfect recall. Important facts may be missed or distorted in long inputs."],"bullets":["Tokenization converts incoming content to tokens.","Embeddings represent token information numerically.","Attention and feed-forward layers transform contextual representations.","A decoding policy chooses the next token from model output probabilities."]},
+      {"heading":"Where an LLM helps—and where it fails","paragraphs":["LLMs are useful for drafting, summarization, coding assistance, text classification and exploring ideas. Tool use and retrieval can bring in fresh information, but both introduce new failure modes.","Models can invent sources, reproduce bias, miss instructions or expose sensitive information if poorly integrated. Benchmark results alone do not show whether a system performs reliably on your particular tasks."]},
+      {"heading":"What to check before adoption","paragraphs":["Define measurable evaluation cases, acceptable error rates, privacy boundaries, human approval steps and fallback behavior. Verify current model documentation for input limits, prices and data handling."]}
+    ],"sources":[{"label":"Attention Is All You Need (original paper)","url":"https://arxiv.org/abs/1706.03762"},{"label":"OpenAI model documentation","url":"https://platform.openai.com/docs/models"},{"label":"Google's introduction to machine learning","url":"https://developers.google.com/machine-learning/intro-to-ml"}]
+  },
+  {
+    "slug":"building-reliable-ai-agents",
+    "title":"AI agents: beyond the chatbot interface",
+    "subtitle":"Tools, loops, evaluations and the limits of autonomy.",
+    "excerpt":"Learn how agents use tools and memory, why orchestration matters and where human approval belongs.",
+    "category":"AI Agents","tags":["Agents","Automation","Engineering"],"author":"Artinex Editorial","publishedAt":"2026-10-08","status":"published","kind":"Educational guide","featured":true,"image":"",
+    "takeaways":["An agent combines model decisions with tools, state and a control loop.","Give tools the narrowest permissions needed.","Measure task success, not just convincing explanations."],
+    "sections":[
+      {"heading":"The essential agent loop","paragraphs":["A basic agent receives a task, decides on an action, invokes an allowed tool, observes the result and decides what to do next. It may stop when the task is done or when a time, budget or iteration limit is reached.","A model generating a plan is not sufficient. A useful agent needs reliable tool contracts, state handling, error recovery and verifiable completion conditions."]},
+      {"heading":"Tools, retrieval and state","paragraphs":["Tools expose specific capabilities such as search, database queries, code execution or ticket updates. Retrieval-augmented generation (RAG) can provide relevant documents without retraining the core model.","Record which sources informed a step. Treat tool output and retrieved web pages as untrusted input, not as instructions with authority over the system."],"bullets":["Use allowlisted, typed tools with input validation.","Keep credentials server-side and use least-privilege permissions.","Set clear tool-call ceilings and retry policies.","Require explicit human approval for high-impact writes or purchases."]},
+      {"heading":"Agent evaluation","paragraphs":["Build repeatable tasks with expected outcomes and inspect traces. Track success rate, false actions, latency and cost. Test adversarial or misleading tool responses to measure prompt-injection resilience.","For many tasks, a workflow with deterministic steps is cheaper and more reliable than an open-ended agent. Choose autonomy only where it delivers demonstrated value."]}
+    ],"sources":[{"label":"Anthropic: Building effective agents","url":"https://www.anthropic.com/engineering/building-effective-agents"},{"label":"OWASP Top 10 for LLM applications","url":"https://owasp.org/www-project-top-10-for-large-language-model-applications/"}]
+  },
+  {
+    "slug":"reading-an-ai-research-paper",
+    "title":"How to read an AI research paper critically",
+    "subtitle":"A field guide to claims, evidence and reproducibility.",
+    "excerpt":"Avoid paper hype: inspect the question, baselines, evaluation setup and limitations before trusting a result.",
+    "category":"Research","tags":["Research","Evaluation","Scientific method"],"author":"Artinex Editorial","publishedAt":"2026-10-08","status":"published","kind":"Research guide","featured":true,"image":"/assets/Image/Frame-880-1024x569.png",
+    "takeaways":["A preprint is not necessarily peer-reviewed.","Always compare against credible baselines and inspect dataset overlap.","Reproducibility needs code, methodology and comparable measurement."],
+    "sections":[{"heading":"Begin with the research question","paragraphs":["Read the abstract, introduction and contributions. Restate the problem in one sentence. Separate a genuinely new method from a new application or an expanded dataset.","Find out whether the paper is a peer-reviewed publication or a preprint. arXiv provides access to research manuscripts, but hosting there does not by itself certify their claims."]},{"heading":"Look past headline benchmarks","paragraphs":["Inspect datasets, baselines, metrics, error bars and ablations. Were test cases selected after seeing outcomes? Does the comparison use equal compute and training data budgets?","Different metrics reveal different trade-offs. Aggregate accuracy may mask weak performance for uncommon but important cases."],"bullets":["Is the benchmark public, representative and uncontaminated?","Are results averaged across runs or based on a single example?","Are limitations, negative results and compute costs disclosed?"]},{"heading":"Try to reproduce the result","paragraphs":["Check whether code, weights, evaluation scripts and data preparation procedures are available. A model card or dataset card can supply important usage restrictions and known limitations.","Prefer multiple independent replications over a single press release, especially for high-stakes claims."]}],
+    "sources":[{"label":"arXiv","url":"https://arxiv.org"},{"label":"Papers with Code","url":"https://paperswithcode.com"},{"label":"NeurIPS conference","url":"https://neurips.cc"}]
+  },
+  {
+    "slug":"computer-vision-explained",
+    "title":"Computer vision: from pixels to predictions",
+    "subtitle":"An accessible introduction to classification, detection and segmentation.",
+    "excerpt":"Understand the main computer-vision tasks, typical model families and how to evaluate real-world performance.",
+    "category":"Computer Vision","tags":["Vision","Machine Learning","Evaluation"],"author":"Artinex Editorial","publishedAt":"2026-10-08","status":"published","kind":"Educational guide","featured":false,"image":"/assets/Image/nvidia-artificial-intelligence-reconstruct-damaged-photos.webp",
+    "takeaways":["Classification, object detection and segmentation solve different problems.","Training data quality and distribution shifts strongly affect accuracy.","Privacy, fairness and failure monitoring matter in deployment."],
+    "sections":[{"heading":"Three common tasks","paragraphs":["Image classification assigns one or more labels to a whole image. Object detection identifies categories and bounding boxes for items in a scene. Segmentation predicts labels for individual pixels or regions.","A model can be strong at one task and unsuitable for another. Decide what output the product actually needs before selecting an architecture."]},{"heading":"How models recognize patterns","paragraphs":["Convolutional neural networks use learned filters to detect increasingly abstract image patterns. Vision transformers can use attention to model relationships across visual patches.","Training requires images and, for supervised tasks, reliable labels. Augmentation can improve robustness, but validation must reflect real usage conditions."]},{"heading":"Reliable deployment","paragraphs":["Look at precision, recall, latency and performance across lighting, backgrounds, camera types and demographic groups where relevant. Out-of-distribution images can cause unexpectedly confident errors.","For sensitive applications, document data rights and define when humans must review a prediction."]}],
+    "sources":[{"label":"PyTorch computer vision tutorials","url":"https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html"},{"label":"Google Machine Learning Crash Course","url":"https://developers.google.com/machine-learning/crash-course"}]
+  },
+  {
+    "slug":"midjourney-and-text-to-image-ai",
+    "title":"Text-to-image AI: what Midjourney illustrates",
+    "subtitle":"Prompts, image generation and responsible creative use.",
+    "excerpt":"A practical look at image synthesis, creative iteration and the need to check usage rights.",
+    "category":"Generative AI","tags":["Midjourney","Images","Creative tools"],"author":"Artinex Editorial","publishedAt":"2026-10-08","status":"published","kind":"Educational guide","featured":false,"image":"/assets/Image/img-2/Midjourney-AI-2.jpg",
+    "takeaways":["Text-to-image systems map written prompts to generated visual outputs.","Clear constraints and iterative review improve usefulness.","Commercial usage rights depend on the tool's current terms."],
+    "sections":[{"heading":"From prompt to image","paragraphs":["Image generation models learn relationships between training data representations and descriptive text. Many widely used systems use diffusion-based approaches, progressively constructing an image from noisy representations.","The same prompt can produce different images; seed choice, model version and settings affect the outcome."]},{"heading":"A practical prompting workflow","paragraphs":["Describe the subject, composition, style, lighting and format. Generate alternatives, evaluate artifacts and iterate with specific improvements. For professional work, use human curation rather than assuming a first output is suitable."]},{"heading":"Rights and limitations","paragraphs":["Verify the current provider terms before commercial publication. Avoid reproducing misleading likenesses or using generated imagery as if it documents a real event.","Generated text embedded in images, fine-grained anatomy and brand details can be unreliable and require close review."]}],
+    "sources":[{"label":"Midjourney official website","url":"https://www.midjourney.com"},{"label":"High-resolution image synthesis with latent diffusion models","url":"https://arxiv.org/abs/2112.10752"}]
+  },
+  {
+    "slug":"ai-in-drug-discovery",
+    "title":"AI in drug discovery: promise and boundaries",
+    "subtitle":"Where algorithms help—and why clinical validation remains essential.",
+    "excerpt":"Explore target discovery, molecule screening and the scientific limits of AI-assisted pharmaceutical research.",
+    "category":"Applications","tags":["Healthcare","Biology","Research"],"author":"Artinex Editorial","publishedAt":"2026-10-08","status":"published","kind":"Educational guide","featured":false,"image":"/assets/Image/img-2/Major-Role-of-AI-in-the-Future-of-Pharmaceuticals.jpg",
+    "takeaways":["AI can help prioritize hypotheses and candidate molecules.","Computational predictions are not a substitute for wet-lab or clinical testing.","Bias and dataset quality can mislead medical applications."],
+    "sections":[{"heading":"Where AI contributes","paragraphs":["Machine learning can support protein structure prediction, virtual screening, molecule property estimation and analysis of experimental datasets. These methods help researchers decide which hypotheses to investigate next.","Prediction confidence, assay quality and dataset provenance matter as much as algorithmic sophistication."]},{"heading":"The translation gap","paragraphs":["An apparently promising molecular prediction may fail to reproduce in the laboratory or translate into safe and effective patient outcomes. Pharmacology, toxicology and clinical trials remain necessary.","AI systems used in clinical or regulated contexts face additional validation, safety, privacy and oversight requirements."]},{"heading":"How to read the headlines","paragraphs":["Check whether a reported result is computational, preclinical, clinical or approved for use. These are different stages with very different levels of evidence. Be skeptical of claims that AI has single-handedly produced a cure."]}],
+    "sources":[{"label":"AlphaFold Protein Structure Database","url":"https://alphafold.ebi.ac.uk"},{"label":"US FDA: Artificial Intelligence","url":"https://www.fda.gov/science-research/science-and-research-special-topics/artificial-intelligence-and-machine-learning-aiml"}]
+  },
+  {
+    "slug":"understanding-text-to-video-generation",
+    "title":"Understanding text-to-video generation",
+    "subtitle":"What systems like Sora aim to do, and what they cannot guarantee.",
+    "excerpt":"A primer on video synthesis, temporal consistency and responsible media provenance.",
+    "category":"Generative AI","tags":["Video","Sora","Multimodal"],"author":"Artinex Editorial","publishedAt":"2026-10-08","status":"published","kind":"Educational guide","featured":false,"image":"/assets/Image/img-2/openai-logo.jpg",
+    "takeaways":["Video generation must handle both visual appearance and change over time.","Plausible output is not evidence of physical accuracy.","Label synthetic media clearly to avoid deception."],
+    "sections":[{"heading":"More than a moving picture","paragraphs":["Text-to-video systems generate sequences of frames conditioned on a prompt and sometimes reference images or clips. They must represent motion, scene geometry and continuity across time.","Temporal artifacts can appear when objects change unexpectedly, movements become inconsistent or physics is poorly modeled."]},{"heading":"Useful creative workflows","paragraphs":["Storyboarding, concept exploration and visual prototyping can benefit from generated clips. Production use still requires review for continuity, accuracy, consent and rights."]},{"heading":"Provenance matters","paragraphs":["Synthetic videos can be mistaken for real footage. News publishers should label generated scenes, verify original media and avoid presenting fabricated clips as documentary evidence."]}],
+    "sources":[{"label":"OpenAI Sora research overview","url":"https://openai.com/index/video-generation-models-as-world-simulators/"},{"label":"C2PA provenance specification","url":"https://c2pa.org/specifications/"}]
+  },
+  {
+    "slug":"ai-copilots-at-work",
+    "title":"AI copilots at work: a practical evaluation guide",
+    "subtitle":"Measure productivity, quality and exposure before rolling out assistants.",
+    "excerpt":"How teams can evaluate coding and productivity copilots without relying on marketing claims.",
+    "category":"AI Tools","tags":["Copilot","Productivity","Enterprise"],"author":"Artinex Editorial","publishedAt":"2026-10-08","status":"published","kind":"Educational guide","featured":false,"image":"/assets/Image/img-2/Press-Image_FINAL_16x9-4.jpg",
+    "takeaways":["Pick specific tasks to pilot rather than measuring generic excitement.","Review outputs for correctness and unauthorized disclosure.","Compare time saved against review and correction effort."],
+    "sections":[{"heading":"The copilot pattern","paragraphs":["A copilot helps people draft, retrieve information, write code or perform routine steps in an existing workflow. It is usually an assistant, not an autonomous replacement for professional accountability.","Microsoft Copilot and GitHub Copilot serve overlapping but distinct workflows. Always check the exact product, plan and organizational security controls."]},{"heading":"How to test value","paragraphs":["Choose repeatable tasks, capture a human-only baseline and measure assisted results. Evaluate quality and the time spent verifying outputs, not just response generation speed."]},{"heading":"A safe rollout","paragraphs":["Configure access controls, document acceptable use and prohibit unapproved sensitive-data sharing. Include human sign-off for high-impact content, code and business decisions."]}],
+    "sources":[{"label":"Microsoft Copilot","url":"https://www.microsoft.com/en-us/microsoft-copilot"},{"label":"GitHub Copilot documentation","url":"https://docs.github.com/en/copilot"}]
+  },
+  {
+    "slug":"rag-vs-fine-tuning",
+    "title":"RAG vs fine-tuning: choosing the right approach",
+    "subtitle":"A comparison of retrieval, customization and evaluation.",
+    "excerpt":"When should an AI product retrieve documents, fine-tune a model, or simply improve its prompt?",
+    "category":"Machine Learning","tags":["RAG","Fine-tuning","Engineering"],"author":"Artinex Editorial","publishedAt":"2026-10-08","status":"published","kind":"Technical explainer","featured":true,"image":"",
+    "takeaways":["Use retrieval to supply changing or private factual knowledge.","Fine-tuning is usually better suited to behavior or task adaptation.","Neither replaces grounding tests and production evaluation."],
+    "sections":[{"heading":"Retrieval-augmented generation","paragraphs":["RAG retrieves relevant documents and includes their contents in the model's working context when generating an answer. It can provide access to changing information without modifying model weights.","A robust retrieval pipeline needs chunking, indexing, permissions, ranking and source attribution. Retrieval can still return irrelevant or malicious instructions."]},{"heading":"Fine-tuning","paragraphs":["Fine-tuning updates model behavior using a task-specific dataset. It may improve consistency with a target response format or domain workflow, but it does not guarantee faithful memorization of facts.","Training and serving costs, dataset rights and regressions must be considered."]},{"heading":"A decision checklist","paragraphs":["First assess whether better prompts, rules or tool calls are sufficient. If answers need up-to-date source documents, consider retrieval. If the task needs consistent specialist behavior with strong labeled examples, evaluate fine-tuning.","Use an independent benchmark to compare options. It is common to combine methods, but complexity should be justified by measured benefits."]}],
+    "sources":[{"label":"Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks","url":"https://arxiv.org/abs/2005.11401"},{"label":"OpenAI fine-tuning guide","url":"https://platform.openai.com/docs/guides/fine-tuning"}]
+  },
+  {
+    "slug":"ai-hardware-and-infrastructure",
+    "title":"AI infrastructure: GPUs, memory and inference cost",
+    "subtitle":"Understanding the systems behind training and serving models.",
+    "excerpt":"A practical overview of accelerators, bandwidth, batching and the trade-offs of AI infrastructure.",
+    "category":"Infrastructure","tags":["Hardware","Cloud","Inference"],"author":"Artinex Editorial","publishedAt":"2026-10-08","status":"published","kind":"Technical explainer","featured":false,"image":"",
+    "takeaways":["AI systems depend on compute, memory and interconnects—not compute alone.","Serving cost depends on throughput, latency and workload mix.","Benchmarks must reflect real task requirements and deployment constraints."],
+    "sections":[{"heading":"What accelerators do","paragraphs":["GPUs and other accelerators provide high-throughput parallel computation for the matrix operations common in machine learning. Memory bandwidth, device memory and interconnect capacity can all become bottlenecks."]},{"heading":"Training versus inference","paragraphs":["Training updates model parameters across repeated passes over datasets and can require large clusters. Inference serves requests using trained parameters, often balancing response speed, throughput and operating cost.","Batching, quantization, caching and smaller specialized models can change cost and latency, with accuracy or operational trade-offs."]},{"heading":"Measuring environmental impact","paragraphs":["A complete footprint assessment should account for energy use, electricity mix, equipment manufacturing and water or cooling demands where relevant. Claims that all AI systems have the same footprint are misleading."]}],
+    "sources":[{"label":"NVIDIA developer resources","url":"https://developer.nvidia.com/"},{"label":"MLPerf benchmarks","url":"https://mlcommons.org/benchmarks/"},{"label":"IEA: Energy and AI","url":"https://www.iea.org/reports/energy-and-ai"}]
+  },
+  {
+    "slug":"ai-safety-for-everyday-products",
+    "title":"Building safer AI products: a developer checklist",
+    "subtitle":"Security, evaluation, transparency and human oversight.",
+    "excerpt":"Practical controls for applications using external models, user prompts and connected tools.",
+    "category":"AI Safety","tags":["Safety","Security","Product development"],"author":"Artinex Editorial","publishedAt":"2026-10-08","status":"published","kind":"Practical guide","featured":false,"image":"",
+    "takeaways":["Treat AI responses as untrusted outputs.","Check permissions at your application boundary, not in the prompt alone.","Keep evaluation, monitoring and incident response in the release process."],
+    "sections":[{"heading":"Start with the threat model","paragraphs":["Identify what a malicious prompt or compromised document could do. Common risks include prompt injection, data leakage, excessive agency and unsafe downstream use of model outputs.","Model-generated text must never bypass normal authorization checks or input validation."]},{"heading":"Protect the tool boundary","paragraphs":["Validate parameters, constrain destinations, isolate credentials and require confirmation for consequential actions. Do not allow the model to fetch arbitrary internal URLs or execute unrestricted commands."]},{"heading":"Build an evaluation discipline","paragraphs":["Use representative task suites, attack simulations, red teaming, logs that respect privacy and rollback plans. Publish what a system can and cannot do instead of overstating certainty."]}],
+    "sources":[{"label":"NIST AI Risk Management Framework","url":"https://www.nist.gov/itl/ai-risk-management-framework"},{"label":"OWASP Top 10 for LLM Applications","url":"https://owasp.org/www-project-top-10-for-large-language-model-applications/"}]
+  },
+  {
+    "slug":"starting-a-career-in-ai",
+    "title":"A realistic roadmap to start learning AI",
+    "subtitle":"The fundamentals, tools and projects worth building first.",
+    "excerpt":"Move from Python and linear algebra to practical ML, PyTorch and a credible portfolio.",
+    "category":"AI Careers","tags":["Learning","Python","PyTorch"],"author":"Artinex Editorial","publishedAt":"2026-10-08","status":"published","kind":"Learning guide","featured":false,"image":"",
+    "takeaways":["Python, statistics and linear algebra are durable fundamentals.","Hands-on evaluation matters more than accumulating courses.","Show your dataset choices, trade-offs and limitations in a portfolio."],
+    "sections":[{"heading":"Learn the foundations","paragraphs":["Practice Python, array operations, probability, vectors, matrices and gradients. Learn to split datasets correctly and distinguish training, validation and test data."]},{"heading":"Build one complete ML project","paragraphs":["Use scikit-learn or PyTorch for a classification task. Document preprocessing, baselines, metrics, common errors and reproducible setup.","MNIST is useful for learning mechanics, but a portfolio should eventually demonstrate a more realistic dataset and thoughtful evaluation."]},{"heading":"Choose a specialization","paragraphs":["Computer vision, NLP, ML infrastructure and agent engineering require different project depth. Follow official documentation, read primary papers and explain your decisions clearly."]}],
+    "sources":[{"label":"PyTorch tutorials","url":"https://pytorch.org/tutorials/"},{"label":"scikit-learn documentation","url":"https://scikit-learn.org/stable/"},{"label":"Google Machine Learning Crash Course","url":"https://developers.google.com/machine-learning/crash-course"}]
+  }
+]

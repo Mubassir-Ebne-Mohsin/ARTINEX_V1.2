@@ -1,0 +1,30 @@
+{
+  "companies": [
+    {"slug":"openai","name":"OpenAI","kind":"AI research and products","summary":"Developer of AI models, research systems and consumer/developer products.","website":"https://openai.com","reference":"https://openai.com/news","topics":["LLMs","Multimodal","AI safety"]},
+    {"slug":"google-deepmind","name":"Google DeepMind","kind":"AI research laboratory","summary":"Research organization developing and studying advanced AI systems.","website":"https://deepmind.google","reference":"https://deepmind.google/research/","topics":["Research","Multimodal","Robotics"]},
+    {"slug":"anthropic","name":"Anthropic","kind":"AI research and products","summary":"Developer of the Claude family of AI assistants and related research.","website":"https://www.anthropic.com","reference":"https://www.anthropic.com/research","topics":["LLMs","Safety","Agents"]},
+    {"slug":"hugging-face","name":"Hugging Face","kind":"Open-source AI ecosystem","summary":"Platform for sharing models, datasets, demos and machine learning resources.","website":"https://huggingface.co","reference":"https://huggingface.co/docs","topics":["Open source","Models","Community"]},
+    {"slug":"nvidia","name":"NVIDIA","kind":"AI computing infrastructure","summary":"Develops computing platforms, accelerators and software used in AI workloads.","website":"https://www.nvidia.com","reference":"https://developer.nvidia.com/","topics":["Hardware","Infrastructure","Robotics"]},
+    {"slug":"mistral-ai","name":"Mistral AI","kind":"AI model developer","summary":"Company developing language models and AI developer products.","website":"https://mistral.ai","reference":"https://docs.mistral.ai/","topics":["LLMs","Open-weight","Agents"]}
+  ],
+  "models": [
+    {"slug":"gpt-family","name":"GPT models","developer":"OpenAI","type":"Language and multimodal model family","summary":"General-purpose models accessed through OpenAI products and APIs. Exact availability, pricing and context depend on the specific model version.","reference":"https://platform.openai.com/docs/models","topics":["Text","Multimodal","API"]},
+    {"slug":"claude-family","name":"Claude models","developer":"Anthropic","type":"Language model family","summary":"General-purpose AI model family for text-oriented and tool-assisted workflows; verify per-model capabilities in the official documentation.","reference":"https://docs.anthropic.com/en/docs/about-claude/models/overview","topics":["Text","Coding","Tools"]},
+    {"slug":"gemini-family","name":"Gemini models","developer":"Google","type":"Multimodal model family","summary":"Google model family with varying modalities and context limits across versions.","reference":"https://ai.google.dev/gemini-api/docs/models","topics":["Multimodal","API","Reasoning"]},
+    {"slug":"mistral-family","name":"Mistral models","developer":"Mistral AI","type":"Language model family","summary":"Language and specialist models; licenses and deployment options vary by release.","reference":"https://docs.mistral.ai/getting-started/models/","topics":["Text","Open-weight","API"]},
+    {"slug":"llama-family","name":"Llama models","developer":"Meta","type":"Open-weight model family","summary":"Model releases with downloadable weights under specific licenses; review model cards before deployment.","reference":"https://www.llama.com/docs/","topics":["Open-weight","Text","Local AI"]},
+    {"slug":"stable-diffusion","name":"Stable Diffusion","developer":"Stability AI and ecosystem contributors","type":"Image-generation model family","summary":"Diffusion-based text-to-image models with diverse checkpoints and usage terms.","reference":"https://stability.ai/","topics":["Images","Diffusion","Generative AI"]}
+  ],
+  "tools": [
+    {"slug":"chatgpt","name":"ChatGPT","company":"OpenAI","category":"Assistants","useCase":"Writing, reasoning, research and everyday assistance","pricing":"See provider","website":"https://chatgpt.com"},
+    {"slug":"claude","name":"Claude","company":"Anthropic","category":"Assistants","useCase":"Writing, analysis, coding and document work","pricing":"See provider","website":"https://claude.ai"},
+    {"slug":"gemini","name":"Gemini","company":"Google","category":"Assistants","useCase":"Multimodal assistant and Google ecosystem workflows","pricing":"See provider","website":"https://gemini.google.com"},
+    {"slug":"huggingface","name":"Hugging Face","company":"Hugging Face","category":"Research","useCase":"Discover models and datasets, share demos","pricing":"See provider","website":"https://huggingface.co"},
+    {"slug":"github-copilot","name":"GitHub Copilot","company":"GitHub","category":"Coding","useCase":"AI-assisted software development","pricing":"See provider","website":"https://github.com/features/copilot"},
+    {"slug":"midjourney","name":"Midjourney","company":"Midjourney","category":"Images","useCase":"Image generation and creative exploration","pricing":"See provider","website":"https://www.midjourney.com"},
+    {"slug":"perplexity","name":"Perplexity","company":"Perplexity","category":"Research","useCase":"Web research with cited answers","pricing":"See provider","website":"https://www.perplexity.ai"},
+    {"slug":"n8n","name":"n8n","company":"n8n","category":"Automation","useCase":"Workflow automation and AI integrations","pricing":"See provider","website":"https://n8n.io"},
+    {"slug":"ollama","name":"Ollama","company":"Ollama","category":"Local AI","useCase":"Run supported AI models locally","pricing":"See provider","website":"https://ollama.com"},
+    {"slug":"pytorch","name":"PyTorch","company":"PyTorch Foundation","category":"Development","useCase":"Develop and train machine learning models","pricing":"Open-source software","website":"https://pytorch.org"}
+  ]
+}
